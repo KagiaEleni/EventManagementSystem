@@ -34,9 +34,7 @@ public class Event {
 		this.Status = "Pending";
 	}
 	
-	public void addVisitor(Visitor visitor) {
-		Visitors.add(visitor);
-	}
+	
 
 	//GETTERS AND SETTERS
 	public String getStatus() {
@@ -47,6 +45,22 @@ public class Event {
 		Status = status;
 	}
 	
+	public ArrayList<Visitor> getVisitors() {
+        return Visitors;
+    }
+    
+    public int getMaxCapacity() {
+        return maxCapacity;
+    }
+    
+    public String getTitle() {
+        return Title;
+    }
+    
+    //Adds visitor to the event's visitor list
+    public void addVisitor(Visitor visitor) {
+		Visitors.add(visitor);
+	}
 	
 	
 	
