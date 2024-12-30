@@ -3,7 +3,7 @@ package com.team3.eventManagementSystem.models;
 import java.util.Date;
 
 public class ApprovalRequest {
-	
+	 //NEW
 	private String Type;
 	private Event Event;
 	private Organizer SubmittedBy;
