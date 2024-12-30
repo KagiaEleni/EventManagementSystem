@@ -46,6 +46,11 @@ public class Event {
 	public void setStatus(String status) {
 		Status = status;
 	}
+
+	public String getTitle() {
+		return Title;
+	}
+	
 	
 	
 	

@@ -3,7 +3,6 @@ package com.team3.eventManagementSystem.models;
 import java.util.Date;
 
 public class ApprovalRequest {
-	 //NEW
 	private String Type;
 	private Event Event;
 	private Organizer SubmittedBy;
@@ -15,13 +14,14 @@ public class ApprovalRequest {
 	private Date ClosedAt;
 	private String Comments;
 	
-	public ApprovalRequest(String type, com.team3.eventManagementSystem.models.Event event, Organizer submittedBy,
+	public ApprovalRequest(String type, Event event, Organizer submittedBy,
 			Date createdAt, String comments) {
 		Type = type;
 		Event = event;
 		SubmittedBy = submittedBy;
 		CreatedAt = createdAt;
-		Status = Event.getStatus();
+		//Status = Event.getStatus();
+		Status= "Pending";
 		Comments = comments;
 	}
 	
@@ -37,5 +37,14 @@ public class ApprovalRequest {
 	public void setClosedAt(Date closedAt) {
 		ClosedAt = closedAt;
 	}
+	
+	public Organizer getOrganizer() {
+		return SubmittedBy;
+	}
+
+	public Event getEvent() {
+		return Event;
+	}
+	
 
 }
