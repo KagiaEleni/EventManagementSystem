@@ -175,7 +175,7 @@ public class EventService {
 		List<Event> existingEvents = viewExistingEvents();
 		if (!existingEvents.isEmpty()) {
 			List<Event> events = existingEvents.stream().filter(event -> event.getYear().equals(year))
-					.collect(Collectors.toList());
+					.toList();
 			if (!events.isEmpty()) {
 				return events;
 			} else
@@ -190,7 +190,7 @@ public class EventService {
 		if (!existingEvents.isEmpty()) {
 			List<Event> events = existingEvents.stream()
 					.filter(event -> event.getYear().equals(year) && event.getMonth().equals(month))
-					.collect(Collectors.toList());
+					.toList();
 			if (!events.isEmpty()) {
 				return events;
 			} else
@@ -204,7 +204,7 @@ public class EventService {
 		List<Event> existingEvents = viewExistingEvents();
 		if (!existingEvents.isEmpty()) {
 			List<Event> events = existingEvents.stream().filter(event -> event.getDay().equals(day)
-					&& event.getMonth().equals(month) && event.getYear().equals(year)).collect(Collectors.toList());
+					&& event.getMonth().equals(month) && event.getYear().equals(year)).toList();
 			if (!events.isEmpty()) {
 				return events;
 			} else
@@ -218,7 +218,7 @@ public class EventService {
 		List<Event> existingEvents = viewExistingEvents();
 		if (!existingEvents.isEmpty()) {
 			List<Event> events = existingEvents.stream().filter(event -> event.getLocation().equalsIgnoreCase(location))
-					.collect(Collectors.toList());
+					.toList();
 			if (!events.isEmpty()) {
 				return events;
 			} else
@@ -232,7 +232,7 @@ public class EventService {
 		List<Event> existingEvents = viewExistingEvents();
 		if (!existingEvents.isEmpty()) {
 			List<Event> events = existingEvents.stream().filter(event -> event.getTheme().equalsIgnoreCase(theme))
-					.collect(Collectors.toList());
+					.toList();
 			if (!events.isEmpty()) {
 				return events;
 			} else
