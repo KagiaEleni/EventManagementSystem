@@ -66,10 +66,11 @@ public class EventController {
 			@RequestParam(required = false) String location, @RequestParam(required = false) String description,
 			@RequestParam(required = false) Integer day, @RequestParam(required = false) Integer month,
 			@RequestParam(required = false) Integer year, @RequestParam(required = false) Integer hour,
-			@RequestParam(required = false) Integer minutes, @RequestParam(required = false) Double duration) {
+			@RequestParam(required = false) Integer minutes, @RequestParam(required = false) Double duration,
+			@RequestParam(required = false) Integer maxCapacity) {
 
 		return eventService.updateEvent(eventId, theme, location, description, day, month, year, hour, minutes,
-				duration);
+				duration, maxCapacity);
 	}
 
 }

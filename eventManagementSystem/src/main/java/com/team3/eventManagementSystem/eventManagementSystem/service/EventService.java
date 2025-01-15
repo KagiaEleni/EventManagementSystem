@@ -66,7 +66,7 @@ public class EventService {
 
 	// Update an Event
 	public boolean updateEvent(Integer eventId, String theme, String location, String description, Integer day,
-			Integer month, Integer year, Integer hour, Integer minutes, Double duration) {
+			Integer month, Integer year, Integer hour, Integer minutes, Double duration, Integer maxCapacity) {
 		if (!eventId.equals(null)) {
 			Event eventToUpdate = findEventById(eventId);
 			if (eventToUpdate != null) {
@@ -96,6 +96,9 @@ public class EventService {
 				}
 				if (duration != null) {
 					eventToUpdate.setDuration(duration);
+				}
+				if (maxCapacity != null) {
+					eventToUpdate.setMaxCapacity(maxCapacity);
 				}
 			}
 			return true;
