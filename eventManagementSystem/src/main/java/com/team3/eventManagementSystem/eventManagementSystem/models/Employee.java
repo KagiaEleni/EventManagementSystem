@@ -51,8 +51,17 @@ public class Employee {
 		this.email = email;
 	}
 
-	public void addToDeletedEvents(Event deletedEvent) {
-		deletedEvents.add(deletedEvent);
+	public List<Event> addToDeletedEvents(Event deletedEvent) {
+		 deletedEvents.add(deletedEvent);
+		 return deletedEvents;
+	}
+
+	public List<Event> getDeletedEvents() {
+		return deletedEvents;
+	}
+
+	public void setDeletedEvents(List<Event> deletedEvents) {
+		this.deletedEvents = deletedEvents;
 	}
 
 }

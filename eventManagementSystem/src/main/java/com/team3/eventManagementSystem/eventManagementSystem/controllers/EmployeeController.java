@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.team3.eventManagementSystem.eventManagementSystem.models.Employee;
+import com.team3.eventManagementSystem.eventManagementSystem.models.Event;
 import com.team3.eventManagementSystem.eventManagementSystem.service.EmployeeService;
 
 @RestController
@@ -43,4 +44,8 @@ public class EmployeeController {
 		return employeeService.deleteEmployeeById(employeeId);
 	}
 
+	@GetMapping("/getDeletedList")
+	public List<Event> getDeletedList(@RequestBody Integer employeeId){
+		return employeeService.getDeletedList(employeeId);
+	}
 }

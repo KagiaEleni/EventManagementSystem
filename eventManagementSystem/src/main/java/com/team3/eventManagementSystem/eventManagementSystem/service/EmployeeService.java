@@ -79,8 +79,14 @@ public class EmployeeService {
 	}
 
 	// Add the Event the Employee deleted to it's deletedEvent list
-	public void addToDeletedList(Event deletedEvent, Integer employeeId) {
-		findEmployeeById(employeeId).addToDeletedEvents(deletedEvent);
+	public List<Event> addToDeletedList(Event deletedEvent, Integer employeeId) {
+		return findEmployeeById(employeeId).addToDeletedEvents(deletedEvent);
+	}
+	
+	// getDeletedEvents() by employeeId
+	public List<Event> getDeletedList(Integer employeeid){
+		Employee e = employeeList.stream().filter(employee -> employee.getId().equals(employeeid)).findFirst().orElse(null);
+		return e.getDeletedEvents();	
 	}
 
 }
